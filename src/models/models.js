@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
-const { Schema } = mongoose;
+
+const Schema = mongoose.Schema;
 
 export const productSchema = new Schema({
   name: {
