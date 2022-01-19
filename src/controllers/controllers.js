@@ -34,3 +34,13 @@ export const getProductWithID = (req, res) => {
     res.json(Product);
   });
 };
+
+export const deleteProduct = (req, res) => {
+  Product.deleteOne(req.params.ProductID, (err, Product) => {
+    if (error) {
+      res.send(err);
+    }
+
+    res.json('successfully deleted product');
+  });
+};
